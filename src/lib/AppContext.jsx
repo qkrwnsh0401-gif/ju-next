@@ -31,6 +31,9 @@ export function AppProvider({ children }) {
     }
   }
 
+  const updateFinancial = (id, data) => setFinancials(prev => prev.map(f => f.id === id ? { ...f, ...data } : f))
+  const deleteFinancial = (id) => setFinancials(prev => prev.filter(f => f.id !== id))
+
   const addWorkLog = (log) => setWorkLogs(prev => [{ ...log, id: Date.now(), log_date: new Date().toISOString().slice(0,10) }, ...prev])
   const updateWorkLog = (id, data) => setWorkLogs(prev => prev.map(l => l.id === id ? { ...l, ...data } : l))
 
@@ -39,7 +42,7 @@ export function AppProvider({ children }) {
       sites, issues, financials, workLogs,
       addSite, updateSite, deleteSite,
       addIssue, updateIssue,
-      addFinancial,
+      addFinancial, updateFinancial, deleteFinancial,
       addWorkLog, updateWorkLog,
     }}>
       {children}
