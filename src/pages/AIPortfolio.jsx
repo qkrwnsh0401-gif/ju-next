@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Sparkles, RefreshCw, Download, FileText } from 'lucide-react'
 import TopBar from '../components/TopBar'
-import { SITES, ISSUES, FINANCIALS, WORK_LOGS, SITE_NAME_BY_ID } from '../lib/mockData'
+import { useApp } from '../lib/AppContext'
 
 const REPORT_TYPES = [
   { id: 'summary', label: '전체 현황 요약', icon: '📊', desc: '모든 현장의 이슈·재무·업무 종합 분석' },
