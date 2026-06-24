@@ -21,6 +21,7 @@ export function AppProvider({ children }) {
 
   const addIssue = (issue) => setIssues(prev => [{ ...issue, id: Date.now(), created_at: new Date().toISOString().slice(0,10) }, ...prev])
   const updateIssue = (id, data) => setIssues(prev => prev.map(i => i.id === id ? { ...i, ...data } : i))
+  const deleteIssue = (id) => setIssues(prev => prev.filter(i => i.id !== id))
 
   const addFinancial = (fin) => {
     const exists = financials.find(f => f.site_id === fin.site_id && f.year_month === fin.year_month)
@@ -36,14 +37,15 @@ export function AppProvider({ children }) {
 
   const addWorkLog = (log) => setWorkLogs(prev => [{ ...log, id: Date.now(), log_date: new Date().toISOString().slice(0,10) }, ...prev])
   const updateWorkLog = (id, data) => setWorkLogs(prev => prev.map(l => l.id === id ? { ...l, ...data } : l))
+  const deleteWorkLog = (id) => setWorkLogs(prev => prev.filter(l => l.id !== id))
 
   return (
     <AppContext.Provider value={{
       sites, issues, financials, workLogs,
       addSite, updateSite, deleteSite,
-      addIssue, updateIssue,
+      addIssue, updateIssue, deleteIssue,
       addFinancial, updateFinancial, deleteFinancial,
-      addWorkLog, updateWorkLog,
+      addWorkLog, updateWorkLog, deleteWorkLog,
     }}>
       {children}
     </AppContext.Provider>
