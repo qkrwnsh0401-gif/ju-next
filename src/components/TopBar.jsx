@@ -45,10 +45,10 @@ export default function TopBar({ title }) {
   }, [])
 
   return (
-    <header className="bg-white border-b border-slate-100 px-6 py-4 flex items-center justify-between relative z-30">
+    <header className="bg-white border-b border-slate-100 px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between relative z-30">
       <div>
-        <h1 className="text-xl font-bold text-navy-800">{title}</h1>
-        <p className="text-xs text-slate-400 mt-0.5">{today}</p>
+        <h1 className="text-base sm:text-xl font-bold text-navy-800">{title}</h1>
+        <p className="text-[10px] sm:text-xs text-slate-400 mt-0.5">{today}</p>
       </div>
       <div className="flex items-center gap-3">
         {/* Search */}

@@ -25,3 +25,14 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
 .recharts-wrapper { font-family: inherit !important; }
+
+/* iOS safe area for bottom nav */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Prevent iOS tap highlight */
+* { -webkit-tap-highlight-color: transparent; }
+
+/* Smooth scroll on iOS */
+.overflow-auto, .overflow-y-auto { -webkit-overflow-scrolling: touch; }

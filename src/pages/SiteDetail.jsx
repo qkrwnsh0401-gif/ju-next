@@ -44,18 +44,18 @@ export default function SiteDetail() {
             </div>
           </div>
           {latestFin && (
-            <div className="grid grid-cols-3 gap-3 mt-4 pt-4 border-t border-navy-700">
+            <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-navy-700">
               <div>
                 <p className="text-xs text-slate-400">이번달 매출</p>
-                <p className="text-base font-bold mt-0.5">{fmt(latestFin.revenue)}</p>
+                <p className="text-sm font-bold mt-0.5">{fmt(latestFin.revenue)}</p>
               </div>
               <div>
                 <p className="text-xs text-slate-400">누적 매출</p>
-                <p className="text-base font-bold mt-0.5">{fmt(totalRevenue)}</p>
+                <p className="text-sm font-bold mt-0.5">{fmt(totalRevenue)}</p>
               </div>
               <div>
                 <p className="text-xs text-slate-400">누적 수익</p>
-                <p className="text-base font-bold mt-0.5 text-teal-400">{fmt(totalProfit)}</p>
+                <p className="text-sm font-bold mt-0.5 text-teal-400">{fmt(totalProfit)}</p>
               </div>
             </div>
           )}
