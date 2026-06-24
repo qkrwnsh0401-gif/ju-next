@@ -1,0 +1,14 @@
+{
+  "name": "JU-NEXT Personal HR OS",
+  "short_name": "JU-NEXT",
+  "description": "현장 인사·운영 관리 시스템",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1B2A4A",
+  "theme_color": "#0D9488",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
